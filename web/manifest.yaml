@@ -8,9 +8,9 @@ metadata:
     tier: frontend
 spec:
   containers:
-    name: web
+  - name: web
     imagePullPolicy: Always
-    image: shafivullashaik/web:v1
+    image: techworldwithsiva/web:k8
     resources:
       requests:
         cpu: "100m"
@@ -20,19 +20,17 @@ spec:
         memory: "128Mi"
     ports:
       - containerPort: 80
-
 ---
 apiVersion: v1
 kind: Service
-meatadata:
+metadata:
   name: web-service
-spec: 
+spec:
   type: LoadBalancer
   selector:
     name: web
     tier: frontend
   ports:
-    protocol: TCP
-    port: 80
-    targetPort: 80
-  
+    - protocol: TCP
+      port: 80
+      targetPort: 80
