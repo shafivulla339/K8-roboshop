@@ -16,11 +16,11 @@ metadata:
     tier: app
 spec:
   containers:
-    name: catalogue
+  - name: catalogue
     imagePullPolicy: Always
     image: shafivullashaik/catalogue:v1
     envFrom:
-      configMapRef:
+    - configMapRef:
         name: catalogue-config
       resources:
         requests:
