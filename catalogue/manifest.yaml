@@ -22,13 +22,13 @@ spec:
     envFrom:
     - configMapRef:
         name: catalogue-config
-      resources:
-        requests:
-          cpu: "100m"
-          memory: "128Mi"
-        limits:
-          cpu: "100m"
-          memory: "128Mi"
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "128Mi"
+      limits:
+        cpu: "100m"
+        memory: "128Mi"
 
 ---
 apiVersion: v1
