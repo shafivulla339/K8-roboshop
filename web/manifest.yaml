@@ -11,6 +11,7 @@ spec:
     name: web
     imagePullPolicy: Always
     image: shafivullashaik/web:v1
+    resources:
       requests:
         cpu: "100m"
         memory: "128Mi"
